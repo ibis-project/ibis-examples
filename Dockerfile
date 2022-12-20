@@ -20,6 +20,7 @@ RUN apt-get update && \
 RUN pip install --no-cache --upgrade pip \
     && pip install --no-cache \
         notebook \
+        jupyterlab \
         pyarrow \
         "git+https://github.com/ibis-project/ibis.git#egg=ibis-framework[sqlite,duckdb,clickhouse]" \
     && find /usr/local/lib/python3.10/site-packages/ -follow -type f -name '*.a' -delete \
