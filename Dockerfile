@@ -12,7 +12,7 @@ RUN adduser --disabled-password \
     ${NB_USER}
 
 RUN apt-get update && \
-    apt-get install -y git curl && \
+    apt-get install -y git && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
