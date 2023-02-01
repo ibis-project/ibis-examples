@@ -27,8 +27,8 @@ RUN pip install --no-cache --upgrade pip \
     && find /usr/local/lib/python3.10/site-packages/ -follow -type f -name '*.pyc' -delete \
     && find /usr/local/lib/python3.10/site-packages/ -follow -type f -name '*.js.map' -delete
 
-COPY --chown=${NB_UID} examples ${HOME}
-COPY --chown=${NB_UID} tutorial ${HOME}
+COPY --chown=${NB_UID} examples ${HOME}/examples
+COPY --chown=${NB_UID} tutorial ${HOME}/tutorial
 
 USER ${USER}
 WORKDIR ${HOME}
