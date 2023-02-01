@@ -29,6 +29,8 @@ RUN pip install --no-cache --upgrade pip \
 
 COPY --chown=${NB_UID} examples ${HOME}/examples
 COPY --chown=${NB_UID} tutorial ${HOME}/tutorial
+COPY --chown=${NB_UID} welcome.md ${HOME}/welcome.md
+COPY --chown=${NB_UID} binder.jupyterlab-workspace ${HOME}/.jupyter/lab/workspaces/default-37a8.jupyterlab-workspace
 
 USER ${USER}
 WORKDIR ${HOME}
