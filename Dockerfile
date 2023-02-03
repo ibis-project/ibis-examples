@@ -17,14 +17,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Install dependencies
-RUN pip install --no-cache --upgrade pip \
-    && pip install --no-cache \
-        notebook \
-        "jupyterlab==3.4.8" \
-        pyarrow \
-        "git+https://github.com/ibis-project/ibis.git#egg=ibis-framework[sqlite,duckdb,clickhouse]" \
-    && find /usr/local/lib/python3.10/site-packages/ -follow -type f -name '*.a' -delete \
-    && find /usr/local/lib/python3.10/site-packages/ -follow -type f -name '*.pyc' -delete \
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache -r requirements.txt \
     && find /usr/local/lib/python3.10/site-packages/ -follow -type f -name '*.js.map' -delete
 
 COPY --chown=${NB_UID} examples ${HOME}/examples
