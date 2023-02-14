@@ -4,10 +4,14 @@ This repository contains runnable example notebooks for
 [Ibis](ibis-project.org/). They are intended to be educational and give users
 examples of common Ibis workflows.
 
-The easiest way to run the notebooks is in the cloud by clicking the link
+The easiest way to run the notebooks is in the cloud by clicking the big button
 below:
 
-[![Binder](https://static.mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ibis-project/ibis-examples/main)
+<div align="center">
+  <a href="https://mybinder.org/v2/gh/ibis-project/ibis-examples/main" rel="nofollow">
+    <img src="https://static.mybinder.org/badge_logo.svg" alt="Launch on mybinder.org" width="60%">
+  </a>
+</div>
 
 ## Contributing
 
