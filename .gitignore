@@ -128,6 +128,12 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# OS generated files
+.directory
+.gdb_history
+.DS_Store?
+Icon?
+
 # Tutorial and examples artifacts
 geography.db
 *.log
