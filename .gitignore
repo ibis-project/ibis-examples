@@ -137,4 +137,5 @@ Icon?
 # Tutorial and examples artifacts
 geography.db
 palmer_penguins.ddb*
+scratch/
 *.log
