@@ -7,5 +7,5 @@ def setup():
     if not os.path.exists("geography.db"):
         urlretrieve(
             "https://storage.googleapis.com/ibis-tutorial-data/geography.db",
-            "geography.db"
+            "geography.db",
         )
