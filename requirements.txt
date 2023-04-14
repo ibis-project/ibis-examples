@@ -1,3 +1,4 @@
 notebook
 jupyterlab == 3.4.8
 ibis-framework[sqlite,duckdb,clickhouse]@git+https://github.com/ibis-project/ibis.git
+ibis-substrait
