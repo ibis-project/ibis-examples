@@ -1,5 +1,5 @@
 notebook
 jupyterlab == 3.4.8
 altair
-ibis-framework[sqlite,duckdb,clickhouse]@git+https://github.com/ibis-project/ibis.git
+ibis-framework[sqlite,duckdb,clickhouse]
 ibis-substrait
