@@ -1,5 +1,7 @@
 # Ibis Example Notebooks
 
+[![Build and Test](https://github.com/ibis-project/ibis-examples/actions/workflows/ci.yml/badge.svg)](https://github.com/ibis-project/ibis-examples/actions/workflows/ci.yml?query=branch%3Amain)
+
 This repository contains runnable example notebooks for
 [Ibis](ibis-project.org/). They are intended to be educational and give users
 examples of common Ibis workflows.
