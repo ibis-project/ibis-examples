@@ -4,4 +4,4 @@ ipywidgets
 altair
 pandas < 2.1
 ibis-framework[sqlite,duckdb,clickhouse]
-ibis-substrait
+ibis-substrait < 3.1
