@@ -3,5 +3,5 @@ jupyterlab == 3.4.8
 ipywidgets
 altair
 pandas < 2.1
-ibis-framework[sqlite,duckdb,clickhouse]
+ibis-framework[sqlite,duckdb,clickhouse,examples]
 ibis-substrait < 3.1

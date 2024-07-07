@@ -34,33 +34,34 @@ else:
 if not parquet_path.exists():
     print("Generating itcont.parquet...")
     # Read in the CSV
-    t = ibis.read_csv(csv_path)
-
     # The CSV doesn't have a header, we need to manually add titles
-    header = [
-        "CMTE_ID",
-        "AMNDT_IND",
-        "RPT_TP",
-        "TRANSACTION_PGI",
-        "IMAGE_NUM",
-        "TRANSACTION_TP",
-        "ENTITY_TP",
-        "NAME",
-        "CITY",
-        "STATE",
-        "ZIP_CODE",
-        "EMPLOYER",
-        "OCCUPATION",
-        "TRANSACTION_DT",
-        "TRANSACTION_AMT",
-        "OTHER_ID",
-        "TRAN_ID",
-        "FILE_NUM",
-        "MEMO_CD",
-        "MEMO_TEXT",
-        "SUB_ID",
-    ]
-    t = t.relabel(dict(zip(t.columns, header)))
+    t = ibis.read_csv(
+        csv_path,
+        header=False,
+        names=[
+            "CMTE_ID",
+            "AMNDT_IND",
+            "RPT_TP",
+            "TRANSACTION_PGI",
+            "IMAGE_NUM",
+            "TRANSACTION_TP",
+            "ENTITY_TP",
+            "NAME",
+            "CITY",
+            "STATE",
+            "ZIP_CODE",
+            "EMPLOYER",
+            "OCCUPATION",
+            "TRANSACTION_DT",
+            "TRANSACTION_AMT",
+            "OTHER_ID",
+            "TRAN_ID",
+            "FILE_NUM",
+            "MEMO_CD",
+            "MEMO_TEXT",
+            "SUB_ID",
+        ],
+    )
 
     # For the analysis, we're only going to use a few of the columns. To save
     # bandwidth, lets select out only the columns we'll be using.
